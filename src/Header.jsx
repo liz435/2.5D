@@ -21,7 +21,9 @@ function Header(){
         <header className='header'>
             <Router>
                 <div className="extra-word">
+ 
         <a className="nav-link">Zelong Li</a>
+
       </div>
 
             <nav className='nav'>
@@ -46,11 +48,10 @@ function Header(){
           <motion.div
             className="handle"
             layout
-  
             whileHover={{ scale: 1.2 }}
             onHoverStart={e => {}}
             onHoverEnd={e => {}}
-            transition={{ type: 'spring', stiffness: 1000, damping: 190 }}
+            transition={{ type: 'spring', stiffness: 1200, damping: 200 }}
             style={{ backgroundColor: isDarkMode ? '#fff' : '#000' }}
             animate={{
                 x: isDarkMode ? 40 : 0,

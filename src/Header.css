@@ -89,3 +89,10 @@ body.dark-mode .nav-link {
 body.dark-mode .nav-link:hover {
   color: #61dafb;
 }
+
+body.dark-mode .nav-item{
+  font-style: italic;
+  color: #252829;
+}
+
+
