@@ -95,4 +95,10 @@ body.dark-mode .nav-item{
   color: #252829;
 }
 
+header.dark-mode .nav-item{
+  font-style: italic;
+  color: #252829;
+}
+
+
 
