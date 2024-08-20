@@ -1,5 +1,5 @@
-import { motion} from "framer-motion";
-import { useState } from 'react';
+import { motion, useInView} from "framer-motion";
+import { useState, useRef } from 'react';
 import './Preview.css'
 
 function Preview() {
@@ -32,28 +32,32 @@ function Preview() {
       <p className="read-the-docs">
         Preview
       </p>
-      <motion.div 
-        className="container"
-        initial="hidden"
-        animate="visible"
-        variants={containerVariants}
-      >
+      <motion.div className="container">
         {projects.map((project) => (
-          <motion.div 
-            key={project.id} 
-            className="display-project"
-            variants={itemVariants}
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            <img src={project.imgURL} alt={project.imgURL} className="project-image" />
-            <h3>{project.title}</h3>
-            {/* <p>{project.description}</p> */}
-          </motion.div>
+          <ProjectItem key={project.id} project={project} variants={itemVariants} />
         ))}
       </motion.div>
     </>
   );
+
+  function ProjectItem({ project, variants }) {
+    const ref = useRef(null);
+    const isInView = useInView(ref, { once: true, margin: "0px 0px -10% 0px" });
+  
+    return (
+      <motion.div
+        ref={ref}
+        className="display-project"
+        initial="hidden"
+        animate={isInView ? "visible" : "hidden"}
+        variants={variants}
+      >
+        <img src={project.imgURL} alt={project.title} className="project-image" />
+        <h3>{project.title}</h3>
+        <p>{project.description}</p>
+      </motion.div>
+    );
+  }
 }
 
 export default Preview;
