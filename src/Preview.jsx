@@ -1,69 +1,52 @@
-import { motion, useMotionValue, useTransform } from "framer-motion";
-import { useState } from "react";
-import "./Preview.css";
+import { motion } from "framer-motion";
+import { useState } from 'react';
+import './Preview.css'
 
 function Preview() {
-  const [hoveredDiv, setHoveredDiv] = useState(null);
+  // State to manage projects
+  const [projects, setProjects] = useState([
+    { id: 1, title: 'Project 1', description: 'Description of Project 1', imgURL:'/Projects/1.png' },
+    { id: 2, title: 'Project 2', description: 'Description of Project 2', imgURL:'/2.png' },
+    { id: 3, title: 'Project 3', description: 'Description of Project 3', imgURL:'./Projects/6.png' },
+  ]);
 
-  const createDivHoverEffect = (index) => {
-    const mouseX = useMotionValue(0);
-    const mouseY = useMotionValue(0);
+  // Animation variants
+  const containerVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.5, staggerChildren: 0.2 } },
+  };
 
-    const rotateX = useTransform(mouseY, [0, 300], [30, -30]);
-    const rotateY = useTransform(mouseX, [0, 300], [-30, 30]);
-
-    return {
-      mouseX,
-      mouseY,
-      rotateX,
-      rotateY,
-      onHoverStart: () => setHoveredDiv(index),
-      onHoverEnd: () => setHoveredDiv(null),
-      onPointerMove: (e) => {
-        const rect = e.currentTarget.getBoundingClientRect();
-        mouseX.set(e.clientX - rect.left - rect.width / 2);
-        mouseY.set(e.clientY - rect.top - rect.height / 2);
-      },
-    };
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 },
   };
 
   return (
-    <div className="container">
-      {[1, 2, 3].map((item, index) => {
-        const {
-          mouseX,
-          mouseY,
-          rotateX,
-          rotateY,
-          onHoverStart,
-          onHoverEnd,
-          onPointerMove,
-        } = createDivHoverEffect(index);
-
-        return (
-          <motion.div
-            key={index}
+    <>
+      <p className="read-the-docs">
+        Preview
+      </p>
+      <motion.div 
+        className="container"
+        initial="hidden"
+        animate="visible"
+        variants={containerVariants}
+      >
+        {projects.map((project) => (
+          <motion.div 
+            key={project.id} 
             className="display-project"
-            style={{
-              rotateX: hoveredDiv === index ? rotateX : 0,
-              rotateY: hoveredDiv === index ? rotateY : 0,
-            }}
-            onHoverStart={onHoverStart}
-            onHoverEnd={onHoverEnd}
-            onPointerMove={onPointerMove}
-            initial={{ scale: 1 }}
-            animate={{ scale: hoveredDiv === index ? 1.05 : 1 }}
+            variants={itemVariants}
+            whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            <img
-              src={`path/to/project${item}.jpg`}
-              alt={`Project ${item}`}
-              className="project-image"
-            />
+            <img src={project.imgURL} alt={project.imgURL} className="project-image" />
+            <h3>{project.title}</h3>
+            {/* <p>{project.description}</p> */}
           </motion.div>
-        );
-      })}
-    </div>
+        ))}
+      </motion.div>
+    </>
   );
 }
 

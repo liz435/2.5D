@@ -21,7 +21,7 @@ function App() {
 
       <Preview></Preview>
 
-    <div className="container">
+    <div className="foooter">
       <LocalTime>
       </LocalTime>
       </div>
