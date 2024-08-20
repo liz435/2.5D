@@ -5,8 +5,8 @@ import './Preview.css'
 function Preview() {
   // State to manage projects
   const [projects, setProjects] = useState([
-    { id: 1, title: 'Project 1', description: 'Description of Project 1', imgURL:'/Projects/1.png' },
-    { id: 2, title: 'Project 2', description: 'Description of Project 2', imgURL:'/2.png' },
+    { id: 1, title: 'Project 1', description: 'Description of Project 1', imgURL:'./Projects/1.png' },
+    { id: 2, title: 'Project 2', description: 'Description of Project 2', imgURL:'./Projects/2.png' },
     { id: 3, title: 'Project 3', description: 'Description of Project 3', imgURL:'./Projects/6.png' },
   ]);
 

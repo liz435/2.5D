@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 
 import Home from './Home/Home';
 import CV from './CV/CV';
-import Projects from './Projects/Projects'
+import Projects from '../public/Projects/Projects'
 
 function Header(){
     const [isDarkMode, setIsDarkMode] = useState(false);
