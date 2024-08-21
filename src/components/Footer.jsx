@@ -16,7 +16,7 @@ function Footer() {
       <br></br>
       <p>{time.toLocaleTimeString()}</p>
       <p className="read-the-docs-fine">
-        Zelong Li ©️
+        ©️ Zelong Li 2024. Made from scratch
       </p>
 
     </div>

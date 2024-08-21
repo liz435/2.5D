@@ -5,9 +5,9 @@ import './css/Project.css'
 export function Project1() {
   return (
     <>
-    <div>
-      <h1 className='project-title'>Projects Page 1</h1>
-      <h3 className='project-intro'>Here are some projects.</h3>
+    <div className='top'>
+      <h1 className='project-title'>23</h1>
+      <h3 className='project-intro'>An Audio Visual Playful Expereince</h3>
     </div>
     </>
   );

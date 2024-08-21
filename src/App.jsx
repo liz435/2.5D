@@ -11,33 +11,12 @@ export function App() {
 
   return (
     <>
-
-      
       <br></br>
       <h1 className="title-text">Hi, My Name Is Zelong</h1>
       <p className="read-the-docs">
         Project Gallery
       </p>
-
       <Preview></Preview>
     </>
   );
 }
-
-
-export function N(){
-  return (
-    <>
-      <br></br>
-      <p className="read-the-docs">
-        Project Gallery
-      </p>
-      
-
-      <h1>
-        THIS IS 
-      </h1>
-    </>
-  );
-}
-

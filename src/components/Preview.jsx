@@ -1,8 +1,10 @@
-import { motion} from "framer-motion";
+import { motion, AnimatePresence} from "framer-motion";
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import Modal from "../Modal";
 import '../css/Preview.css'
-import { SpeedInsights } from "@vercel/speed-insights/next"
+import { SpeedInsights } from '@vercel/speed-insights/react';
+import {DarkModeContext} from '../DarkModeContext' 
 // import RippleEffect from './RippleEffect';
 
 const preloadImage = (src) => {
@@ -17,6 +19,9 @@ const preloadImage = (src) => {
   };
 
 function Preview() {
+  const [selectedProject, setSelectedProject] = useState(null);
+  const { darkMode } = useContext(DarkModeContext);
+
     const imagesToPreload = [
         './thumbnails/6.png',
         './thumbnails/3.png',
@@ -66,9 +71,31 @@ const navigate = useNavigate();
       }, 800); 
   };
 
+  const handleProjectClick = (project) => {
+    setSelectedProject(project);
+  };
+
+  const handleClose = () => {
+    setSelectedProject(null);
+  };
+
+  useEffect(() => {
+    if (selectedProject) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
+
+    return () => {
+      document.body.style.overflow = 'auto';  // Cleanup in case of unmount
+    };
+  }, [selectedProject]);
+
+
+
   return (
     <>
-    <SpeedInsights/>
+
      <div style={{ position: 'relative', overflow: 'hidden' }}></div>
       {/* <RippleEffect darkMode={darkMode} /> */}
       <motion.div 
@@ -86,7 +113,7 @@ const navigate = useNavigate();
             // initial={{ filter: "grayscale(100%)" }}
             whileHover={{ filter: "grayscale(0%)",saturat:200, scale:1.05 }}
             whileTap={{ scale: 0.95 }}
-            onClick={() => handleRedirect(project.path)}
+            onClick={() => handleProjectClick(project)}
           >
             <div className="image-wrapper">
             <img src={project.imgURL} alt={project.imgURL} className="project-image" />
@@ -96,6 +123,15 @@ const navigate = useNavigate();
           </motion.div>
         ))}
       </motion.div>
+
+
+      <AnimatePresence>
+        {selectedProject && (
+          <Modal selectedProject={selectedProject} onClose={handleClose} darkMode={darkMode} />
+        )}
+      </AnimatePresence>
+
+      <SpeedInsights/>
     </>
   );
 }
