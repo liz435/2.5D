@@ -129,3 +129,15 @@ body.dark-mode .read-the-docs {
 body.dark-mode .read-the-docs-fine {
   color: #5c5c5c;
 }
+
+body.dark-mode .project-title{
+  color:rgb(21, 21, 21);
+  transition: color 0.5s ease;
+}
+
+body.dark-mode .project-intro{
+  color:rgb(21, 21, 21);
+  transition: color 0.5s ease;
+}
+
+
