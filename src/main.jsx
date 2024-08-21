@@ -7,9 +7,11 @@ import { DarkModeProvider } from './DarkModeContext.jsx'
 import Header from './components/Header.jsx';
 import Footer from './components/Footer.jsx'
 import './css/index.css'
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
+    <SpeedInsights>
     <DarkModeProvider>
     <BrowserRouter>
 
@@ -29,5 +31,6 @@ createRoot(document.getElementById('root')).render(
 
     <Footer/>
     </DarkModeProvider>
+    </SpeedInsights>
   </StrictMode>,
 )
