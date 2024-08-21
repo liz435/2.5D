@@ -1,6 +1,6 @@
 import { motion, useInView} from "framer-motion";
 import { useState, useRef } from 'react';
-import './Preview.css'
+import '../css/Preview.css'
 
 function Preview_alternative() {
   // State to manage projects

@@ -1,8 +1,9 @@
 import React,{useEffect, useState} from 'react';
 import { motion } from 'framer-motion';
-import './Header.css';
+import '../css/Header.css';
 import { Link } from 'react-router-dom';
-import { useDarkMode } from './DarkModeContext';
+import { useDarkMode } from '../DarkModeContext';
+import Linkedin from '../assets/linkedin.svg'
 
 function Header() {
   const { darkMode, toggleDarkMode } = useDarkMode();
@@ -36,6 +37,9 @@ function Header() {
           <li className="nav-item">
             <Link to="/projects" className="nav-link">Projects</Link>
           </li>
+          {/* <li>
+            <img src={Linkedin} style={{height:30,}}></img>
+          </li> */}
         </ul>
         <motion.div
           className="switch"

@@ -1,7 +1,7 @@
 import { motion} from "framer-motion";
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import './Preview.css'
+import '../css/Preview.css'
 // import RippleEffect from './RippleEffect';
 
 const preloadImage = (src) => {
@@ -31,10 +31,10 @@ const navigate = useNavigate();
     { id: 2, title: 'Project 2', description: 'Description of Project 2', imgURL:'./thumbnails/3.png', path:'project-2' },
     { id: 3, title: 'Project 3', description: 'Description of Project 3', imgURL:'./thumbnails/hand.png', path:'project-3'  },
     { id: 4, title: 'Project 4', description: 'Description of Project 4', imgURL:'./thumbnails/6.png', path:'project-4' },
-    { id: 5, title: 'Project 5', description: 'Description of Project 5', imgURL:'./thumbnails/6.png', },
-    { id: 6, title: 'Project 6', description: 'Description of Project 6', imgURL:'./thumbnails/6.png',},
-    { id: 7, title: 'Project 7', description: 'Description of Project 7', imgURL:'./thumbnails/6.png', },
-    { id: 8, title: 'Project 8', description: 'Description of Project 8', imgURL:'./thumbnails/6.png',},
+    { id: 5, title: 'Project 5', description: 'Description of Project 5', imgURL:'./thumbnails/6.png',path:'project-5' },
+    { id: 6, title: 'Project 6', description: 'Description of Project 6', imgURL:'./thumbnails/6.png',path:'project-6'},
+    { id: 7, title: 'Project 7', description: 'Description of Project 7', imgURL:'./thumbnails/6.png', path:'project-7'},
+    { id: 8, title: 'Project 8', description: 'Description of Project 8', imgURL:'./thumbnails/6.png',path:'project-8'},
   ]);
 
 

@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
 import { useState } from 'react';
-import LocalTime from "./Footer.jsx";
-import Preview from "./Preview.jsx"
-import Preview_alternative from "./Preview_alternative.jsx";
-import './App.css';
+import LocalTime from "./components/Footer.jsx";
+import Preview from "./components/Preview.jsx"
+import Preview_alternative from "./components/Preview_alternative.jsx";
+import './css/App.css';
 
 
 export function App() {
