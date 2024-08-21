@@ -57,7 +57,7 @@
   }
   
   .dark-mode .modal-backdrop {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.307);
   }
   
   .dark-mode .modal-content {
@@ -67,7 +67,7 @@
   }
   
   .dark-mode .close-button {
-    color: #fff;
+    color: #040404;
   }
   
   .dark-mode .close-button:hover {
