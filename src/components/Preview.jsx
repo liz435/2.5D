@@ -1,10 +1,10 @@
 import { motion, AnimatePresence} from "framer-motion";
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Modal from "../Modal";
 import '../css/Preview.css'
 import { SpeedInsights } from '@vercel/speed-insights/react';
-import {DarkModeContext} from '../DarkModeContext' 
+import DarkModeContext from '../DarkModeContext' 
 // import RippleEffect from './RippleEffect';
 
 const preloadImage = (src) => {
