@@ -2,6 +2,7 @@ import { motion} from "framer-motion";
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../css/Preview.css'
+import { SpeedInsights } from "@vercel/speed-insights/next"
 // import RippleEffect from './RippleEffect';
 
 const preloadImage = (src) => {
@@ -67,6 +68,7 @@ const navigate = useNavigate();
 
   return (
     <>
+    <SpeedInsights/>
      <div style={{ position: 'relative', overflow: 'hidden' }}></div>
       {/* <RippleEffect darkMode={darkMode} /> */}
       <motion.div 
