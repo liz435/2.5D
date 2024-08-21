@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-function LocalTime() {
+function Footer() {
   const [time, setTime] = useState(new Date());
 
   useEffect(() => {
@@ -13,9 +13,14 @@ function LocalTime() {
 
   return (
     <div className='read-the-docs'>
+      <br></br>
       <p>{time.toLocaleTimeString()}</p>
+      <p className="read-the-docs-fine">
+        Zelong Li ©️
+      </p>
+
     </div>
   );
 }
 
-export default LocalTime;
+export default Footer;

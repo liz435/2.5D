@@ -7,43 +7,13 @@
 }
 
 
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
 html{
   scroll-behavior: smooth;
 }
 
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.title{
-  text-align: left;
-  margin-left: 0;
+.title-text{
+  color:rgb(240, 229, 229)
 }
 
 .title-container {
@@ -68,7 +38,6 @@ html{
   height: 200px;
   border-radius: 50%;
   background-color: aqua;
-  border: 3px dotted black;
   ;
 }
 

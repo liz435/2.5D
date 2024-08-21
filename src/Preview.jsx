@@ -1,25 +1,43 @@
 import { motion} from "framer-motion";
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Preview.css'
+// import RippleEffect from './RippleEffect';
+
+const preloadImage = (src) => {
+    const img = new Image();
+    img.src = src;
+  };
+  
+  const usePreloadImages = (imageUrls) => {
+    useEffect(() => {
+      imageUrls.forEach(preloadImage);
+    }, [imageUrls]);
+  };
 
 function Preview() {
+    const imagesToPreload = [
+        './thumbnails/6.png',
+        './thumbnails/3.png',
+        './thumbnails/hand.png',
+      ];
+    
+      usePreloadImages(imagesToPreload);
 const navigate = useNavigate();
-  // State to manage projects
   const [exitAnimation, setExitAnimation] = useState(false);
 
   const [projects, setProjects] = useState([
-    { id: 1, title: 'Project 1', description: 'Description of Project 1', imgURL:'./public/thumbnails/6.png', path:'project-1' },
-    { id: 2, title: 'Project 2', description: 'Description of Project 2', imgURL:'./public/thumbnails/3.png', path:'project-2' },
-    { id: 3, title: 'Project 3', description: 'Description of Project 3', imgURL:'./public/thumbnails/hand.png', path:'project-3'  },
-    { id: 4, title: 'Project 4', description: 'Description of Project 4', imgURL:'./public/thumbnails/6.png', path:'project-4' },
-    { id: 5, title: 'Project 5', description: 'Description of Project 5', imgURL:'./public/thumbnails/6.png', },
-    { id: 6, title: 'Project 6', description: 'Description of Project 6', imgURL:'./public/thumbnails/6.png',},
-    { id: 7, title: 'Project 7', description: 'Description of Project 7', imgURL:'./public/thumbnails/6.png', },
-    { id: 8, title: 'Project 8', description: 'Description of Project 8', imgURL:'./public/thumbnails/6.png',},
+    { id: 1, title: 'Project 1', description: 'Description of Project 1', imgURL:'./thumbnails/6.png', path:'project-1' },
+    { id: 2, title: 'Project 2', description: 'Description of Project 2', imgURL:'./thumbnails/3.png', path:'project-2' },
+    { id: 3, title: 'Project 3', description: 'Description of Project 3', imgURL:'./thumbnails/hand.png', path:'project-3'  },
+    { id: 4, title: 'Project 4', description: 'Description of Project 4', imgURL:'./thumbnails/6.png', path:'project-4' },
+    { id: 5, title: 'Project 5', description: 'Description of Project 5', imgURL:'./thumbnails/6.png', },
+    { id: 6, title: 'Project 6', description: 'Description of Project 6', imgURL:'./thumbnails/6.png',},
+    { id: 7, title: 'Project 7', description: 'Description of Project 7', imgURL:'./thumbnails/6.png', },
+    { id: 8, title: 'Project 8', description: 'Description of Project 8', imgURL:'./thumbnails/6.png',},
   ]);
 
-  // Animation variants
+
   const containerVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.5, staggerChildren: 0.2 } },
@@ -32,7 +50,7 @@ const navigate = useNavigate();
       y: 0,
       filter: "grayscale(100%)",
       transition: {
-        duration: 0.3, // Duration of each item’s animation
+        duration: 0.3,
         type: "spring",
         stiffness: 100,
         damping: 10,
@@ -44,14 +62,13 @@ const navigate = useNavigate();
     setExitAnimation(true);
     setTimeout(() => {
         navigate(path);
-      }, 500); 
+      }, 800); 
   };
 
   return (
     <>
-      {/* <p className="read-the-docs">
-        Preview
-      </p> */}
+     <div style={{ position: 'relative', overflow: 'hidden' }}></div>
+      {/* <RippleEffect darkMode={darkMode} /> */}
       <motion.div 
         className="container"
         initial="hidden"

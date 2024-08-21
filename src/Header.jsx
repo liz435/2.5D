@@ -1,70 +1,59 @@
-import React, {useState} from 'react'
-import {delay, motion} from 'framer-motion'
-import './Header.css'
-import { Route, Routes } from 'react-router-dom';
+import React,{useEffect, useState} from 'react';
+import { motion } from 'framer-motion';
+import './Header.css';
 import { Link } from 'react-router-dom';
+import { useDarkMode } from './DarkModeContext';
 
-import Home from './Home/Home';
-import CV from './CV/CV';
-// import {Projects1, Project2} from '../public/Projects/Project.jsx'
+function Header() {
+  const { darkMode, toggleDarkMode } = useDarkMode();
+  const [isFirstRender, setIsFirstRender] = useState(true);
 
-function Header(){
-    const [isDarkMode, setIsDarkMode] = useState(false);
+  useEffect(() => {
+    setIsFirstRender(false);
+    if (darkMode) {
+      document.body.classList.add('dark-mode');
+    } else {
+      document.body.classList.remove('dark-mode');
+    }
+  }, [darkMode]);
 
-    const toggleDarkMode = () => {
-      setIsDarkMode(!isDarkMode);
-      document.body.classList.toggle('dark-mode', !isDarkMode);
-    };
 
-
-    return(
-        <header className='header'>
-        <div className="extra-word">
+  return (
+    <header className={`header ${darkMode ? '':'dark-mode' }`}>
+      <div className="extra-word">
+        <h3>
         <a className="nav-link">Zelong Li</a>
-
+        </h3>
       </div>
-            <nav className='nav'>
-                <ul className='nav-list'>
-                    <li className='nav-item'>
-                        <Link href='#home' className='nav-link'>Home</Link>
-                    </li>
-
-                    <li className="nav-item">
-                        <Link href="#cv" className="nav-link">CV</Link>
-                    </li>
-
-                    <li className="nav-item">
-                        <Link href="#projects" className="nav-link">Projects</Link>
-                    </li>
-                </ul>
-                <motion.div
+      <nav className="nav">
+        <ul className="nav-list">
+          <li className="nav-item">
+            <Link to="/" className="nav-link">Home</Link>
+          </li>
+          <li className="nav-item">
+            <Link to="/cv" className="nav-link">Newsletter</Link>
+          </li>
+          <li className="nav-item">
+            <Link to="/projects" className="nav-link">Projects</Link>
+          </li>
+        </ul>
+        <motion.div
           className="switch"
           onClick={toggleDarkMode}
-   
-          initial={{ backgroundColor: isDarkMode ? '#333' : '#ccc' }}
-          animate={{ backgroundColor: isDarkMode ? '#333' : '#ccc' }}
+          initial={{ backgroundColor: darkMode ? '#333' : '#ccc' }}
+          animate={{ backgroundColor: darkMode ? '#333' : '#ccc' }}
         >
           <motion.div
             className="handle"
             layout
             whileHover={{ scale: 1.2 }}
-            onHoverStart={e => {}}
-            onHoverEnd={e => {}}
             transition={{ type: 'spring', stiffness: 1200, damping: 200 }}
-            style={{ backgroundColor: isDarkMode ? '#fff' : '#000' }}
-            animate={{
-                x: isDarkMode ? 40 : 0,
-            }}
+            animate={{ x: darkMode ? 40 : 0 }}
           />
         </motion.div>
-            </nav>
-        {/* <Routes>
-        <Route path="/home" element={<Home />} />
-        <Route path="/cv" element={<CV />} />
-        <Route path="/projects" element={<Projects1 />} />
-        </Routes> */}
-        </header>
-    )
-};
+      </nav>
+    </header>
+  );
+}
 
 export default Header;

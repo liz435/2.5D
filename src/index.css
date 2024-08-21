@@ -5,12 +5,13 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #1d1e20;
+
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
 }
 
 a {
@@ -23,6 +24,7 @@ a:hover {
 }
 
 body {
+  background-color: #1d1e20;
   margin: 0;
   /* display: flex;
   place-items: center; */

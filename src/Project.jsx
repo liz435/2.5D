@@ -1,11 +1,14 @@
 import React from 'react';
+import Header from './Header';
 
 export function Project1() {
   return (
+    <>
     <div>
       <h1>Projects Page 1</h1>
       <p>Here are some projects.</p>
     </div>
+    </>
   );
 }
 
