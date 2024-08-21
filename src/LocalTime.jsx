@@ -12,7 +12,7 @@ function LocalTime() {
   }, []);
 
   return (
-    <div className='time'>
+    <div className='read-the-docs'>
       <p>{time.toLocaleTimeString()}</p>
     </div>
   );

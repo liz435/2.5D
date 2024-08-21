@@ -57,6 +57,12 @@ html{
   color: #888;
 }
 
+.read-the-docs-fine{
+  margin-top: -10px;
+  color: #888;
+  font-size: smaller;
+}
+
 .box {
   width: 200px;
   height: 200px;

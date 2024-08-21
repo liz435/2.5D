@@ -2,7 +2,7 @@ import { motion, useInView} from "framer-motion";
 import { useState, useRef } from 'react';
 import './Preview.css'
 
-function Preview() {
+function Preview_alternative() {
   // State to manage projects
   const [projects, setProjects] = useState([
     { id: 1, title: 'Project 1', description: 'Description of Project 1', imgURL:'./Projects/1.png' },
@@ -60,4 +60,4 @@ function Preview() {
   }
 }
 
-export default Preview;
+export default Preview_alternative;

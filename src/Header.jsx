@@ -1,12 +1,12 @@
 import React, {useState} from 'react'
 import {delay, motion} from 'framer-motion'
 import './Header.css'
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 
 import Home from './Home/Home';
 import CV from './CV/CV';
-import Projects from '../public/Projects/Projects'
+// import {Projects1, Project2} from '../public/Projects/Project.jsx'
 
 function Header(){
     const [isDarkMode, setIsDarkMode] = useState(false);
@@ -19,21 +19,20 @@ function Header(){
 
     return(
         <header className='header'>
-            <Router>
-                <div className="extra-word">
- 
+        <div className="extra-word">
         <a className="nav-link">Zelong Li</a>
 
       </div>
-
             <nav className='nav'>
                 <ul className='nav-list'>
                     <li className='nav-item'>
                         <Link href='#home' className='nav-link'>Home</Link>
                     </li>
+
                     <li className="nav-item">
                         <Link href="#cv" className="nav-link">CV</Link>
                     </li>
+
                     <li className="nav-item">
                         <Link href="#projects" className="nav-link">Projects</Link>
                     </li>
@@ -56,21 +55,14 @@ function Header(){
             animate={{
                 x: isDarkMode ? 40 : 0,
             }}
-
           />
         </motion.div>
-
-
-
-
             </nav>
-
-    <Routes>
+        {/* <Routes>
         <Route path="/home" element={<Home />} />
         <Route path="/cv" element={<CV />} />
-        <Route path="/projects" element={<Projects />} />
-      </Routes>
-    </Router>
+        <Route path="/projects" element={<Projects1 />} />
+        </Routes> */}
         </header>
     )
 };

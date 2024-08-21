@@ -3,20 +3,22 @@ import { useState } from 'react';
 import Header from './Header.jsx';
 import LocalTime from "./LocalTime.jsx";
 import Preview from "./Preview.jsx"
+import Preview_alternative from "./Preview_alternative.jsx";
 import './App.css';
 
-function App() {
+
+export function App() {
 
 
   return (
     <>
+
       <Header>
       </Header>
-
-      
       <br></br>
+      <h1>Hi, My Name Is Zelong</h1>
       <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
+        Project Gallery
       </p>
 
       <Preview></Preview>
@@ -24,10 +26,33 @@ function App() {
     <div className="foooter">
       <LocalTime>
       </LocalTime>
-      </div>
 
+      <p className="read-the-docs-fine">
+        Zelong Li ©️
+      </p>
+
+      </div>
     </>
   );
 }
 
-export default App;
+
+export function N(){
+  return (
+    <>
+
+      <Header>
+      </Header>
+      <br></br>
+      <p className="read-the-docs">
+        Project Gallery
+      </p>
+      
+
+      <h1>
+        THIS IS 
+      </h1>
+    </>
+  );
+}
+
