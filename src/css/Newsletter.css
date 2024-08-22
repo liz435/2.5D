@@ -12,6 +12,10 @@
     max-width: 65%;
 }
 
+.newsletter-title{
+    text-align: center;
+}
+
 .newsletter-input {
     margin-top: 1rem;
     padding: 0.5rem;
