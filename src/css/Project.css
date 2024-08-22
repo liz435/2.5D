@@ -38,4 +38,21 @@
 .tools{
     font-style: italic;
     opacity: 0.5;
+    width: 50vw;
+}
+
+.tools-wrapper{
+    max-width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.caption{
+    margin-top: -1vw;
+    opacity: 0.5;
+}
+
+.video{
+    width: 50vw;
 }
