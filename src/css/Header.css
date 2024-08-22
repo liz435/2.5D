@@ -6,20 +6,42 @@
 
 /* Media Query for Mobile Devices */
 @media (max-width: 768px) {
-  .header {
-      height: 1rem;
-  }
-  .nav-link{
-    font-size: smaller;
-  }
-  .switch{
-    width: 30px;
-    height: 10px;
+
+  .extra-word {
+    display: none; /* Hide nav links initially on mobile */
   }
 
-  .handle{
-    width: 9px;
-    height: 9px;
+  .nav-list.active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 3rem; /* Position below the header */
+    right: 1rem;
+    background-color: #111; /* or use a color suitable for your theme */
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-item {
+    margin: 0.5rem 0; /* Adjust margin for mobile view */
+  }
+
+  .toggle-menu {
+    display: block;
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin-right: 1rem;
+  }
+
+  .switch {
+    width: 30px;
+    height: 15px;
+  }
+
+  .handle {
+    width: 13px;
+    height: 13px;
   }
 }
 
@@ -165,5 +187,6 @@ body.dark-mode .project-intro{
   color:rgb(21, 21, 21);
   transition: color 0.5s ease;
 }
+
 
 

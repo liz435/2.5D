@@ -1,36 +1,12 @@
 import React, { useState } from 'react';
+import {motion} from 'framer-motion'
 import './css/Newsletter.css';
 import NewsletterWeavingEffect from './NewletterEffect';
+import { useDarkMode } from './DarkModeContext';
 
 function Newsletter() {
     const [email, setEmail] = useState('');
-
-    // Function to continuously resize the window
-    const startResizing = () => {
-        let growing = true;
-
-        function resizeWindow() {
-            if (growing) {
-                window.resizeTo(window.innerWidth + 1, window.innerHeight);
-                if (window.innerWidth >= screen.width) {
-                    growing = false;
-                }
-            } else {
-                window.resizeTo(window.innerWidth - 1, window.innerHeight);
-                if (window.innerWidth <= 100) {
-                    growing = true;
-                }
-            }
-
-            // Continue the loop indefinitely
-            requestAnimationFrame(resizeWindow);
-        }
-        console.log(window.innerWidth)
-        resizeWindow(); // Start the resizing loop
-    };
-
-    // Start the resizing immediately
-    startResizing();
+    const { darkMode } = useDarkMode();
 
     const handleInputChange = (e) => {
         setEmail(e.target.value);
@@ -44,17 +20,21 @@ function Newsletter() {
 
     return (
         <>
+        <div className={`news-container ${darkMode ? 'dark-mode' : ''}`}></div>
             <div className='news-container'>
                 <div className='news-wrapper'>
                     <h1 className='newsletter-title'>Newsletter</h1>
 
-                    <h2>
+                    <h2 className='newsletter-text'>
                         Stay informed on Art and Technology has never been so entertaining.
                         Delivered not guaranteed on Thursday, for free :)
                     </h2>
                 </div>
 
-                <NewsletterWeavingEffect />
+                {/* <NewsletterWeavingEffect /> */}
+
+                <div className='divider'/>
+        
 
        
                 <form onSubmit={handleFormSubmit}>
@@ -66,9 +46,39 @@ function Newsletter() {
                         onChange={handleInputChange}
                         required
                     />
-                    <button type='submit' className='newsletter-button'>
+                    {/* <button type='submit' className='newsletter-button'>
                         Sign Up
-                    </button>
+                    </button> */}
+     <motion.button
+    type='submit' 
+    className='newsletter-button'
+    initial={{
+        opacity: 0,                   
+    }}
+    animate={{
+        opacity: 1,          
+        scale: 1.2,
+        rotate: 10,                
+        transition: {
+            type: 'spring',  
+            stiffness: 300,  
+            damping: 20,  
+
+        }
+    }}
+    whileHover={{
+        scale: 1.2,
+        rotate: 0,  
+        transition: {
+            type: 'spring',  
+            stiffness: 300,  
+            damping: 15,   
+        }
+    }}
+>
+    Sign Up
+</motion.button>
+
                 </form>
             </div>
         </>

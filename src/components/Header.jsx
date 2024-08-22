@@ -8,6 +8,12 @@ import Linkedin from '../assets/linkedin.svg'
 function Header() {
   const { darkMode, toggleDarkMode } = useDarkMode();
   const [isFirstRender, setIsFirstRender] = useState(true);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+  
 
   useEffect(() => {
     setIsFirstRender(false);
@@ -35,7 +41,7 @@ function Header() {
             <Link to="/Newsletter" className="nav-link">Newsletter</Link>
           </li>
           <li className="nav-item">
-            <Link to="/projects" className="nav-link">Projects</Link>
+            <Link to="/contact" className="nav-link">Contact</Link>
           </li>
           {/* <li>
             <img src={Linkedin} style={{height:30,}}></img>
