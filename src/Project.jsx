@@ -140,10 +140,39 @@ export function Project4() {
 
 export function Project5() {
   return (
-    <div>
-      <h1 className='project-title'>Projects Page 5 </h1>
-      <h3 className='project-intro'>Here are some projects.</h3>
-    </div>
+    <>
+
+    <div className='top'>
+          <h2 className='project-intro'>Data as Life: A Skeuomorphic Exploration of New York City
+          </h2>
+        </div>
+    
+        <div className='tools-wrapper'>
+        <p className='tools'>
+        Threejs, AFrame, npm, Blender, React
+        </p>
+        </div>
+    
+        <div className='text-wrapper'>
+          <p className='text'>
+          his project examines New York City through a macro-scale analysis, utilizing datasets on population, transportation, construction, networking, and more to create a skeuomorphic, interactive 3D model using Three.js and AFrame. Acknowledging potential minor biases in data interpretation, the project seeks to represent the city holistically, rather than from any specific perspective. The resulting online model, presented as a living entity, aims to offer a unique, creative visualization that reflects the diverse and complex character of New York City, allowing viewers to engage with the city's multifaceted nature in an innovative way.
+        </p>
+        </div>
+
+        <div className="iframe-wrapper">
+            <iframe
+              src='https://nickel-boggy-roast.glitch.me/'
+              width="100%"
+              height="500px" 
+              style={{ border: 'none' }}
+              allowFullScreen
+            ></iframe>
+          </div>
+    
+        
+        <Footer/>
+        <div className='divider'/>
+        </>
   );
 }
 
