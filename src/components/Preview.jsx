@@ -40,7 +40,7 @@ const navigate = useNavigate();
     { id: 5, title: 'Siphonophrae', description: 'Description of Project 5', imgURL:'./thumbnails/c.png',path:'project-5' },
     { id: 6, title: 'Sound Wave', description: 'Description of Project 6', imgURL:'./thumbnails/hand.png',path:'project-6'},
     { id: 7, title: 'MetaEternity', description: 'Description of Project 7', imgURL:'./thumbnails/1.JPG', path:'project-7'},
-    { id: 8, title: 'Coming Soon', description: 'Description of Project 8', imgURL:'./thumbnails/part1.png',path:'project-8'},
+    { id: 8, title: 'Coming Soon!', description: 'Description of Project 8', imgURL:'./thumbnails/part1.png',path:'project-8'},
   ]);
 
 
@@ -112,7 +112,7 @@ const navigate = useNavigate();
             <div className="image-wrapper">
             <img src={project.imgURL} alt={project.imgURL} className="project-image" />
             </div>
-            <h3>{project.title}</h3>
+            {/* <h3>{project.title}</h3> */}
             {/* <p>{project.description}</p> */}
           </motion.div>
         ))}

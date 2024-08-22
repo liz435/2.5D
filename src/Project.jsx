@@ -210,12 +210,7 @@ export function Project6() {
 
     <img src='/project/6/concept.png' className='img-wrapper'></img>
     <p className='caption'>Haptic Feeback Visualization</p>
-    {/* <div className='gallery-4'>
-           <img src='/project/6/1.png' ></img>
-           <img src='/project/6/2.png'></img>
-           <img src='/project/6/newmold.png' ></img>
-           <img src='/project/6/flow.png'></img>
-    </div> */}
+
         <div className='divider'></div>
                <img src='/project/6/1.png' className='img-wrapper'></img>
                <p className='caption'>Hand Recognition Using Webcam</p>
@@ -232,19 +227,65 @@ export function Project6() {
 
 export function Project7() {
   return (
-    <div>
-      <h1 className='project-title'>Projects Page 7 </h1>
-      <h3 className='project-intro'>Here are some projects.</h3>
-    </div>
+
+    <>
+
+    <div className='top'>
+          <h2 className='project-intro'> 
+          The cradle rocks above an abyss, and common sense tells us that our existence is but a brief crack of light between two eternities of darkness.” - Vladimir Nabokov
+          </h2>
+        </div>
+    
+        <div className='tools-wrapper'>
+        <p className='tools'>
+        Unity, Oculus, Disco Diffusion, Velostat, Arduino, UDP
+        </p>
+        </div>
+    
+        <div className='text-wrapper'>
+          <p className='text'>
+          As the metaverse unfolds, it offers new methods to connect and exist outside of our physical selves. What implications might this have after our physical bodies pass away? How do we make sense of our social and material relationships in physical space vs. virtual space? Is there some form of continued existence we can embed in the metaverse? If VR offers us a glimpse into these worlds, how can we move away from the insularity and single-player mode that it usually affords? Gallery-goers will be invited to respond to the above questions by drawing, writing, and crafting a suite of soft device modular controllers resulting in a user-driven virtual world. Their text will be fed into an AI image generator and the results will create the blueprint for the environments. The controllers do not map 1-to-1 with the virtual space, as a result, the combined efforts of participants will result in an act of generative meaning-making and collective conjuring. The aim of the project is to explore, through iterative and collaborative performance, emergent understandings of virtual embodiment, consciousness, and the digital afterlife.
+          </p>
+        </div>
+
+
+        <video className='video'autoPlay loop muted >
+      <source src="/project/7/me.mp4" type="video/mp4"/>
+        </video>
+
+        <div className='divider'/>
+
+          <div className='gallery-4'>
+           <img src='/project/7/sensor.JPG' ></img>
+           <img src='/project/7/sensor2.jpg'></img>
+          </div> 
+
+          <p className='caption'> silicon embeded sensors</p>
+
+
+
+          <div className='divider'/>
+
+          <div className='gallery-4'>
+           <img src='/project/7/part1.png' ></img>
+           <img src='/project/7/part2.png'></img>
+           <img src='/project/7/part3.png' ></img>
+           <img src='/project/7/mold2.JPG'></img>
+          </div> 
+          <p className='caption'> CAD design and the mold</p>
+
+
+        <Footer/>
+        <div className='divider'/>
+        </>
+
+
   );
 }
 
 export function Project8() {
   return (
-    <div>
-      <h1 className='project-title'>Projects Page 8 </h1>
-      <h3 className='project-intro'>Here are some projects.</h3>
-    </div>
+    <Footer/>
   );
 }
 
