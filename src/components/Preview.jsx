@@ -33,12 +33,12 @@ const navigate = useNavigate();
   const [exitAnimation, setExitAnimation] = useState(false);
 
   const [projects, setProjects] = useState([
-    { id: 1, title: 'Project 1', description: 'Description of Project 1', imgURL:'./thumbnails/23.png', path:'project-1' },
+    { id: 1, title: '"23"', description: 'Description of Project 1', imgURL:'./thumbnails/23.png', path:'project-1' },
     { id: 2, title: 'Project 2', description: 'Description of Project 2', imgURL:'./thumbnails/3.png', path:'project-2' },
-    { id: 3, title: 'Project 3', description: 'Description of Project 3', imgURL:'./thumbnails/hand.png', path:'project-3'  },
+    { id: 3, title: 'Project 3', description: 'Description of Project 3', imgURL:'./thumbnails/Cola3.jpg', path:'project-3'  },
     { id: 4, title: 'Project 4', description: 'Description of Project 4', imgURL:'./thumbnails/4.png', path:'project-4' },
     { id: 5, title: 'Project 5', description: 'Description of Project 5', imgURL:'./thumbnails/c.png',path:'project-5' },
-    { id: 6, title: 'Project 6', description: 'Description of Project 6', imgURL:'./thumbnails/Cola3.jpg',path:'project-6'},
+    { id: 6, title: 'Project 6', description: 'Description of Project 6', imgURL:'./thumbnails/hand.png',path:'project-6'},
     { id: 7, title: 'Project 7', description: 'Description of Project 7', imgURL:'./thumbnails/1.JPG', path:'project-7'},
     { id: 8, title: 'Project 8', description: 'Description of Project 8', imgURL:'./thumbnails/part1.png',path:'project-8'},
   ]);
