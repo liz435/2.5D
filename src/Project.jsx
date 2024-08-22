@@ -78,20 +78,63 @@ export function Project2() {
 
 export function Project3() {
   return (
-    <div>
-      <h1 className='project-title'>Projects Page 3 </h1>
-      <h3 className='project-intro'>Here are some projects.</h3>
+
+    <>
+
+    <div className='top'>
+      <h2 className='project-intro'> They Are Not That Real
+      </h2>
     </div>
+
+    <div className='tools-wrapper'>
+    <p className='tools'>
+        Maya, Blender, ZBrush
+    </p>
+    </div>
+    <div className='gallery-4'>
+           <img src='/project/3/Cola.png' ></img>
+           <img src='/project/3/Cola2.png'></img>
+    </div>
+    <Footer/>
+    <div className='divider'/>
+    </>
   );
 }
 
 
 export function Project4() {
   return (
-    <div>
-      <h1 className='project-title'>Projects Page 4 </h1>
-      <h3 className='project-intro'>Here are some projects.</h3>
+    <>
+
+<div className='top'>
+      <h2 className='project-intro'>Recontextualize Truth: Erasure and Reconstruction
+      </h2>
     </div>
+
+    <div className='tools-wrapper'>
+    <p className='tools'>
+    Whiteout, Dictionary, Camera, Adobe Premiere
+    </p>
+    </div>
+
+    <div className='text-wrapper'>
+      <p className='text'>
+      This piece explores the concept of using erasure as a tool to manipulate historical archives. By selectively removing certain elements and recontextualizing them within existing contexts, the work creates new meanings and questions the authenticity and reliability of historical narratives. The process also reveals power dynamics that shape historical archives and challenges the notion of a singular truth. Ultimately, the piece encourages viewers to reflect back on how the meaning is constructed and how it's distorted by power in position.
+    </p>
+    </div>
+
+    <div className='gallery-4'>
+           <img src='/project/4/1.png' ></img>
+           <img src='/project/4/2.png'></img>
+           <img src='/project/4/3.png' ></img>
+           <img src='/project/4/4.png'></img>
+    </div>
+    
+    
+    <Footer/>
+    <div className='divider'/>
+    </>
+    
   );
 }
 

@@ -35,8 +35,8 @@ const navigate = useNavigate();
   const [projects, setProjects] = useState([
     { id: 1, title: '"23"', description: 'Description of Project 1', imgURL:'./thumbnails/23.png', path:'project-1' },
     { id: 2, title: 'The Waiting Room', description: 'Description of Project 2', imgURL:'./thumbnails/3.png', path:'project-2' },
-    { id: 3, title: 'Project 3', description: 'Description of Project 3', imgURL:'./thumbnails/Cola3.jpg', path:'project-3'  },
-    { id: 4, title: 'Project 4', description: 'Description of Project 4', imgURL:'./thumbnails/4.png', path:'project-4' },
+    { id: 3, title: '3D Renders', description: 'Description of Project 3', imgURL:'./thumbnails/Cola3.jpg', path:'project-3'  },
+    { id: 4, title: 'Erasure', description: 'Description of Project 4', imgURL:'./thumbnails/4.png', path:'project-4' },
     { id: 5, title: 'Project 5', description: 'Description of Project 5', imgURL:'./thumbnails/c.png',path:'project-5' },
     { id: 6, title: 'Project 6', description: 'Description of Project 6', imgURL:'./thumbnails/hand.png',path:'project-6'},
     { id: 7, title: 'Project 7', description: 'Description of Project 7', imgURL:'./thumbnails/1.JPG', path:'project-7'},
