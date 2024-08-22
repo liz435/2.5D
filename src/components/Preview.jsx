@@ -33,7 +33,7 @@ const navigate = useNavigate();
   const [exitAnimation, setExitAnimation] = useState(false);
 
   const [projects, setProjects] = useState([
-    { id: 1, title: 'Project 1', description: 'Description of Project 1', imgURL:'./thumbnails/21.png', path:'project-1' },
+    { id: 1, title: 'Project 1', description: 'Description of Project 1', imgURL:'./thumbnails/23.png', path:'project-1' },
     { id: 2, title: 'Project 2', description: 'Description of Project 2', imgURL:'./thumbnails/3.png', path:'project-2' },
     { id: 3, title: 'Project 3', description: 'Description of Project 3', imgURL:'./thumbnails/hand.png', path:'project-3'  },
     { id: 4, title: 'Project 4', description: 'Description of Project 4', imgURL:'./thumbnails/4.png', path:'project-4' },
