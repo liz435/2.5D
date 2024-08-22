@@ -38,9 +38,9 @@ const navigate = useNavigate();
     { id: 3, title: '3D Renders', description: 'Description of Project 3', imgURL:'./thumbnails/Cola3.jpg', path:'project-3'  },
     { id: 4, title: 'Erasure', description: 'Description of Project 4', imgURL:'./thumbnails/4.png', path:'project-4' },
     { id: 5, title: 'Siphonophrae', description: 'Description of Project 5', imgURL:'./thumbnails/c.png',path:'project-5' },
-    { id: 6, title: 'Project 6', description: 'Description of Project 6', imgURL:'./thumbnails/hand.png',path:'project-6'},
-    { id: 7, title: 'Project 7', description: 'Description of Project 7', imgURL:'./thumbnails/1.JPG', path:'project-7'},
-    { id: 8, title: 'Project 8', description: 'Description of Project 8', imgURL:'./thumbnails/part1.png',path:'project-8'},
+    { id: 6, title: 'Sound Wave', description: 'Description of Project 6', imgURL:'./thumbnails/hand.png',path:'project-6'},
+    { id: 7, title: 'MetaEternity', description: 'Description of Project 7', imgURL:'./thumbnails/1.JPG', path:'project-7'},
+    { id: 8, title: 'Coming Soon', description: 'Description of Project 8', imgURL:'./thumbnails/part1.png',path:'project-8'},
   ]);
 
 
@@ -64,12 +64,6 @@ const navigate = useNavigate();
 },
   };
 
-  const handleRedirect = (path) => {
-    setExitAnimation(true);
-    setTimeout(() => {
-        navigate(path);
-      }, 800); 
-  };
 
   const handleProjectClick = (project) => {
     setSelectedProject(project);

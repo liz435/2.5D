@@ -178,10 +178,55 @@ export function Project5() {
 
 export function Project6() {
   return (
-    <div>
-      <h1 className='project-title'>Projects Page 6</h1>
-      <h3 className='project-intro'>Here are some projects.</h3>
+    <>
+
+<div className='top'>
+      <h2 className='project-intro'> 
+      Immersive Computing That Kinda Redefined Interaction
+      </h2>
     </div>
+
+    <div className='tools-wrapper'>
+    <p className='tools'>
+    Unity, JavaScript, Node.js, Three.js, MaxMsp, MediaPipe, ERMs, Battery, Raspberry Pi, Glove, 3D Printing
+    </p>
+    </div>
+
+    <div className='text-wrapper'>
+      <p className='text'>
+      The objective of this project is to investigate a novel approach to interacting with computers, circumventing conventional input devices in favor of three-dimensional input as the primary means of interaction with the digital realm. The customary controllers currently in use rely on one or two-dimensional input data, which provide limited scope for interaction. However, by employing three-dimensional input, the amount of data generated increases significantly, thereby expanding the possibilities for interaction and enabling novel forms of engagement.
+      </p>
+
+      <p className='text'>
+        The proposed approach involves tracking the virtual position of the user's hand through a webcam, a readily available solution. Additionally, a specially designed glove with haptic feedback facilitates users' interaction with digital content on a physical level, bridging the gap between the digital and physical worlds. The haptic feedback is based on the contact of the object and the color of the contact. Different colors have distinct vibration patterns based on the color frequency. This integration of digital and physical realms has the potential to revolutionize the way we interact with computers, providing a more immersive and intuitive experience for users.
+      </p>
+    </div>
+
+    <img src='/project/6/flow.png' className='img-wrapper'></img>
+    <p className='caption'>Flow Chart</p>
+
+    <div className='divider'></div>
+
+
+    <img src='/project/6/concept.png' className='img-wrapper'></img>
+    <p className='caption'>Haptic Feeback Visualization</p>
+    {/* <div className='gallery-4'>
+           <img src='/project/6/1.png' ></img>
+           <img src='/project/6/2.png'></img>
+           <img src='/project/6/newmold.png' ></img>
+           <img src='/project/6/flow.png'></img>
+    </div> */}
+        <div className='divider'></div>
+               <img src='/project/6/1.png' className='img-wrapper'></img>
+               <p className='caption'>Hand Recognition Using Webcam</p>
+
+               <div className='divider'></div>
+               <img src='/project/6/2.png' className='img-wrapper'></img>
+               <p className='caption'>Haptic Feedback Glove Prototype</p>
+    
+    <Footer/>
+    <div className='divider'/>
+    </>
   );
 }
 

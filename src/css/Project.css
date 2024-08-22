@@ -33,6 +33,7 @@
     justify-content: center;
     align-items: center;
     padding: 1rem;
+    flex-direction: column;
 }
 
 .tools{
@@ -54,4 +55,11 @@
 
 .video{
     width: 50vw;
+}
+
+.img-wrapper{
+    width: 100%;
+    height: auto;
+    object-fit: cover; 
+    border-radius: 5px; 
 }
