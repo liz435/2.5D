@@ -46,5 +46,14 @@ html{
   display: flex;
 }
 
+.app-wrapper{
+  width:100vw;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+.app-container{
+ width: 70vw;
+}
 
 

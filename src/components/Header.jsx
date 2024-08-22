@@ -1,35 +1,48 @@
-import React,{useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import '../css/Header.css';
 import { Link } from 'react-router-dom';
 import { useDarkMode } from '../DarkModeContext';
-import Linkedin from '../assets/linkedin.svg'
+import Linkedin from '../assets/linkedin.svg';
 
 function Header() {
-  const { darkMode, toggleDarkMode } = useDarkMode();
+  const { darkMode, toggleDarkMode, setDarkMode } = useDarkMode(); // Add setDarkMode to control the initial state
   const [isFirstRender, setIsFirstRender] = useState(true);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
-  
 
   useEffect(() => {
     setIsFirstRender(false);
-    if (darkMode) {
-      document.body.classList.add('dark-mode');
-    } else {
-      document.body.classList.remove('dark-mode');
+    const savedDarkMode = localStorage.getItem('darkMode') === 'true';
+    
+    if (savedDarkMode) {
+      // Delay applying dark mode for effect
+      setTimeout(() => {
+        setDarkMode(true);
+        document.body.classList.add('dark-mode');
+      }, 500); // Adjust delay as needed
     }
-  }, [darkMode]);
+  }, []);
 
+  useEffect(() => {
+    if (!isFirstRender) {
+      if (darkMode) {
+        document.body.classList.add('dark-mode');
+      } else {
+        document.body.classList.remove('dark-mode');
+      }
+      localStorage.setItem('darkMode', darkMode); // Save preference to localStorage
+    }
+  }, [darkMode, isFirstRender]);
 
   return (
-    <header className={`header ${darkMode ? '':'dark-mode' }`}>
+    <header className={`header ${darkMode ? '' : 'dark-mode'}`}>
       <div className="extra-word">
         <h3>
-        <a className="nav-link">Zelong Li</a>
+          <a className="nav-link">Zelong Li</a>
         </h3>
       </div>
       <nav className="nav">
@@ -43,9 +56,6 @@ function Header() {
           <li className="nav-item">
             <Link to="/contact" className="nav-link">Contact</Link>
           </li>
-          {/* <li>
-            <img src={Linkedin} style={{height:30,}}></img>
-          </li> */}
         </ul>
         <motion.div
           className="switch"
