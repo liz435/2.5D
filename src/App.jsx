@@ -4,10 +4,11 @@ import LocalTime from "./components/Footer.jsx";
 import Preview from "./components/Preview.jsx"
 import Preview_alternative from "./components/Preview_alternative.jsx";
 import './css/App.css';
+import { inject } from '@vercel/analytics';
 
 
 export function App() {
-
+    inject();
 
   return (
     <>

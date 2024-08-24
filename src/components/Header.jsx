@@ -6,24 +6,19 @@ import { useDarkMode } from '../DarkModeContext';
 import Linkedin from '../assets/linkedin.svg';
 
 function Header() {
-  const { darkMode, toggleDarkMode, setDarkMode } = useDarkMode(); // Add setDarkMode to control the initial state
+  const { darkMode, toggleDarkMode, setDarkMode } = useDarkMode(); 
   const [isFirstRender, setIsFirstRender] = useState(true);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
 
   useEffect(() => {
     setIsFirstRender(false);
     const savedDarkMode = localStorage.getItem('darkMode') === 'true';
     
     if (savedDarkMode) {
-      // Delay applying dark mode for effect
       setTimeout(() => {
         setDarkMode(true);
         document.body.classList.add('dark-mode');
-      }, 500); // Adjust delay as needed
+      }, 500);
     }
   }, []);
 
@@ -34,7 +29,7 @@ function Header() {
       } else {
         document.body.classList.remove('dark-mode');
       }
-      localStorage.setItem('darkMode', darkMode); // Save preference to localStorage
+      localStorage.setItem('darkMode', darkMode); 
     }
   }, [darkMode, isFirstRender]);
 
@@ -68,7 +63,7 @@ function Header() {
             layout
             whileHover={{ scale: 1.2 }}
             transition={{ type: 'spring', stiffness: 1200, damping: 200 }}
-            animate={{ x: darkMode ? 40 : 0 }}
+            animate={{ x: darkMode ? 30 : 0 }}
           />
         </motion.div>
       </nav>
