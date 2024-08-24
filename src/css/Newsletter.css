@@ -10,6 +10,7 @@
 
 .news-wrapper {
     max-width: 65%;
+    justify-content: center;
 }
 
 .newsletter-title{
@@ -79,22 +80,26 @@
 }
 
 @media (max-width: 768px) {
+
+    .news-wrapper{
+        width: 80%;
+    }
     .newsletter-title {
-        font-size: 2.2rem; /* Smaller font size for the title */
+        font-size: 2.2rem; 
     }
 
     .newsletter-text {
-        font-size: 1.2rem; /* Smaller font size for the title */
+        font-size: 1.2rem;
     }
 
 
     .newsletter-input {
-        font-size: 0.9rem; /* Smaller font size for input */
-        padding: 0.4rem; /* Adjust padding for input */
+        font-size: 0.9rem;
+        padding: 0.4rem;
     }
 
     .newsletter-button {
-        font-size: 0.9rem; /* Smaller font size for button */
-        padding: 0.5rem 0.8rem; /* Adjust padding for button */
+        font-size: 0.9rem; 
+        padding: 0.5rem 0.8rem; 
     }
 }

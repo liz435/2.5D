@@ -4,27 +4,27 @@
   }
 }
 
-/* Media Query for Mobile Devices */
+
 @media (max-width: 768px) {
 
   .extra-word {
-    display: none; /* Hide nav links initially on mobile */
+    display: none; 
   }
 
   .nav-list.active {
     display: flex;
     flex-direction: column;
     position: absolute;
-    top: 3rem; /* Position below the header */
+    top: 3rem;
     right: 1rem;
-    background-color: #111; /* or use a color suitable for your theme */
+    background-color: #111; 
     padding: 1rem;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
 
   .nav-item {
-    margin: 0.5rem 0; /* Adjust margin for mobile view */
+    margin: 0.5rem 0;
   }
 
   .toggle-menu {

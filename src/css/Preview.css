@@ -10,9 +10,9 @@
     background-color: rgb(0, 0, 0);
     border-radius: 4%;
     margin-bottom: 15px;
-    flex: 1 1 calc(33.333% - 30px); /* 3 items per row on larger screens */
-    margin: 15px; /* Spacing between items */
-    position: relative; /* Required for the padding trick */
+    flex: 1 1 calc(33.333% - 30px);
+    margin: 15px; 
+    position: relative;
 }
 
 .display-project::before {
@@ -32,14 +32,14 @@
 /* Media Query for Tablets and Small Laptops */
 @media (max-width: 1024px) {
     .display-project {
-        flex: 1 1 calc(50% - 30px); /* 2 items per row on medium screens */
+        flex: 1 1 calc(50% - 30px); 
     }
 }
 
 /* Media Query for Mobile Devices */
 @media (max-width: 768px) {
     .display-project {
-        flex: 1 1 calc(100% - 30px); /* 1 item per row on small screens */
+        flex: 1 1 calc(100% - 30px);
     }
 }
 

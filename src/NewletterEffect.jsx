@@ -14,8 +14,7 @@ const NewsletterWeavingEffect = () => {
   };
 
   const draw = (p5) => {
-    // Clear the background every 2 frames
-      p5.background(255, 255, 255, 0); // Transparent background
+      p5.background(255, 255, 255, 0); 
     
 
     for (let i = 0; i < letters.length; i++) {
@@ -40,7 +39,7 @@ const NewsletterWeavingEffect = () => {
           205
         );
 
-        p5.fill(colorValue); // Apply the subtle grayscale color to the text
+        p5.fill(colorValue); 
 
         p5.text(letters[j], x, y);
       }
