@@ -15,7 +15,8 @@ export function App() {
       <div className="app-wrapper">
       <div className="app-container">
       <h1 className="title-text">Hi, My Name Is Zelong</h1>
-      <h2 className="title-text">I Work With Technology and try to make it poetic and pretty</h2>
+      <h2 className="title-text">I like pretty things</h2>
+      
       </div>
       </div>
       <div className="divider"/>

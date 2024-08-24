@@ -1,35 +1,32 @@
-/* Contact.css */
 
-/* General Styles */
 .contact-container {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 2rem;
     flex-wrap: wrap;
 }
 
-/* Contact box styles */
 .contact-box {
     background-color: rgba(219, 216, 216, 0.767);
     border-radius: 10px;
     height: 50vh;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 2rem;
+    padding: 1rem;
     text-align: center;
     width: 25%;
     cursor: pointer;
     transition: background-color 0.6s ease;
     margin: 1rem;
+    backdrop-filter: blur(10px); /* initial blur effect */
 }
-
 .contact-text {
-    color: rgba(175, 67, 67, 0.767);
+    color: rgba(104, 104, 104, 0.767);
 }
 
 .contact-title {
     color: rgba(0, 0, 0, 0.767);
 }
+
 
 .dark-mode .contact-box {
     background-color: rgba(41, 41, 41, 0.767);
@@ -41,6 +38,11 @@
 
 .dark-mode .contact-text {
     color: rgb(196, 196, 196);
+}
+
+.dark-mode .contact-box:hover {
+    
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.7), rgba(44, 41, 41, 0.2));
 }
 
 .contact-box h2 {
@@ -55,7 +57,12 @@
 
 .contact-box:hover {
     transform: translateY(-10px);
+    background: linear-gradient(135deg, rgba(143, 143, 143, 0.685), rgba(219, 219, 219, 0.767));
+    backdrop-filter: blur(15px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.6s ease;
 }
+
 
 
 @media (max-width: 768px) {

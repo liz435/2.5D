@@ -1,4 +1,4 @@
-/* Base Styles */
+
 .news-container {
     display: flex;
     flex-direction: column;
@@ -76,4 +76,25 @@
 
 .dark-mode .newsletter-button:hover {
     background-color: #b3b3b3;
+}
+
+@media (max-width: 768px) {
+    .newsletter-title {
+        font-size: 2.2rem; /* Smaller font size for the title */
+    }
+
+    .newsletter-text {
+        font-size: 1.2rem; /* Smaller font size for the title */
+    }
+
+
+    .newsletter-input {
+        font-size: 0.9rem; /* Smaller font size for input */
+        padding: 0.4rem; /* Adjust padding for input */
+    }
+
+    .newsletter-button {
+        font-size: 0.9rem; /* Smaller font size for button */
+        padding: 0.5rem 0.8rem; /* Adjust padding for button */
+    }
 }
