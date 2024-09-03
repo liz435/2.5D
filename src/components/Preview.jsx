@@ -101,6 +101,7 @@ const navigate = useNavigate();
       >
         {projects.map((project) => (
           <motion.div 
+            style={{cursor: 'pointer'}}
             key={project.id} 
             className="display-project"
             variants={itemVariants}
