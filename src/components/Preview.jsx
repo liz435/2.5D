@@ -36,7 +36,7 @@ const navigate = useNavigate();
     { id: 1, title: '"23"', description: 'Description of Project 1', imgURL:'./thumbnails/23.jpeg', path:'project-1' },
     { id: 2, title: 'The Waiting Room', description: 'Description of Project 2', imgURL:'./thumbnails/3.jpeg', path:'project-2' },
     { id: 3, title: '3D Renders', description: 'Description of Project 3', imgURL:'./thumbnails/Cola3.jpeg', path:'project-3'  },
-    { id: 4, title: 'Erasure', description: 'Description of Project 4', imgURL:'./thumbnails/4.png', path:'project-4' },
+    { id: 4, title: 'Erasure', description: 'Description of Project 4', imgURL:'./thumbnails/4.jpeg', path:'project-4' },
     { id: 5, title: 'Siphonophrae', description: 'Description of Project 5', imgURL:'./thumbnails/c.png',path:'project-5' },
     { id: 6, title: 'Sound Wave', description: 'Description of Project 6', imgURL:'./thumbnails/hand.jpeg',path:'project-6'},
     { id: 7, title: 'MetaEternity', description: 'Description of Project 7', imgURL:'./thumbnails/1.JPG', path:'project-7'},
