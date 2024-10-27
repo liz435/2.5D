@@ -7,6 +7,7 @@ import Background from "./components/Background.jsx";
 export function App() {
     inject();
 
+    
   return (
     <>
       <br></br>
