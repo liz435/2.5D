@@ -1,4 +1,4 @@
-import React from 'react';
+
 import './css/Project.css'
 import Footer from './components/Footer';
 

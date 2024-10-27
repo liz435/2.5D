@@ -7,6 +7,7 @@ import Newsletter from './Newsletter.jsx'
 import Header from './components/Header.jsx';
 import Footer from './components/Footer.jsx'
 import Contact from './Contact.jsx'
+import Background from './components/Background.jsx'
 import './css/index.css'
 
 
@@ -16,6 +17,7 @@ createRoot(document.getElementById('root')).render(
     <BrowserRouter>
 
     <Header/>
+    <Background/>
     <Routes>
       <Route path="/" element={<App />} />
       <Route path="/Newsletter" element={<Newsletter/>} />

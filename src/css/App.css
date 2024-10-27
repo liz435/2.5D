@@ -53,4 +53,61 @@ html{
   width:100;
 }
 
+/* Wrapper to cover the entire viewport */
+.background-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  z-index: -1; /* Send to the background layer */
+}
 
+/* Grid layout for dots that fills the viewport */
+.grid-dots {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 35px); /* 30px dot + 5px gap */
+  grid-template-rows: repeat(auto-fill, 35px); /* 30px dot + 5px gap */
+  width: 100%;
+  height: 100%;
+}
+
+.dot-container {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.dot-hitbox {
+  width: 100%;
+  height: 100%;
+}
+
+.dot-inner {
+  width: 3px;
+  height: 3px;
+  background-color: rgb(76, 76, 76);
+  border-radius: 50%;
+  opacity: 0;
+  animation: dotFadeIn 0.5s ease-out forwards;
+}
+
+@keyframes dotFadeIn {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.dark-mode .dot-inner{
+  background-color: #888;
+  transition: ease-in-out 0.5s;
+}

@@ -1,10 +1,7 @@
-import { motion } from "framer-motion";
-import { useState } from 'react';
-import LocalTime from "./components/Footer.jsx";
 import Preview from "./components/Preview.jsx"
-import Preview_alternative from "./components/Preview_alternative.jsx";
 import './css/App.css';
 import { inject } from '@vercel/analytics';
+import Background from "./components/Background.jsx";
 
 
 export function App() {
@@ -16,7 +13,8 @@ export function App() {
       <div className="app-wrapper">
       <div className="app-container">
       <h1 className="title-text">Hi, My Name Is Zelong</h1>
-      <h2 className="title-text">I like pretty things</h2>
+      <h2 className="title-text">I am Frontend Engineer</h2>
+      <h2 className="title-text">I like simple pretty things</h2>
       
       </div>
       </div>
