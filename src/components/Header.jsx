@@ -13,7 +13,6 @@ function Header() {
   useEffect(() => {
     setIsFirstRender(false);
     const savedDarkMode = localStorage.getItem('darkMode') === 'true';
-    
     if (savedDarkMode) {
       setTimeout(() => {
         setDarkMode(true);
@@ -55,7 +54,6 @@ function Header() {
         <motion.div
           className="switch"
           onClick={toggleDarkMode}
-          initial={{ backgroundColor: darkMode ? '#333' : '#ccc' }}
           animate={{ backgroundColor: darkMode ? '#333' : '#ccc' }}
         >
           <motion.div

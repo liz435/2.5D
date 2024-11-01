@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import {motion} from 'framer-motion'
 import './css/Newsletter.css';
-import NewsletterWeavingEffect from './NewletterEffect';
 import { useDarkMode } from './DarkModeContext';
 
 function Newsletter() {

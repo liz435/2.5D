@@ -1,15 +1,9 @@
-import { useEffect, useState } from "react";
-import '../css/App.css'; // Ensure you import your CSS file
+
+import '../css/App.css'; 
 
 export default function Background() {
   const numRows = 50;
   const numCols = 50;
-  const [hasAnimated, setHasAnimated] = useState(false);
-
-  useEffect(() => {
-    setHasAnimated(true);
-  }, []);
-
   const dots = [];
   for (let row = 0; row < numRows; row++) {
     for (let col = 0; col < numCols; col++) {

@@ -3,9 +3,10 @@ import { useState, useEffect, useContext, createContext } from 'react';
 const DarkModeContext = createContext();
 
 export function DarkModeProvider({ children }) {
+  
   const [darkMode, setDarkMode] = useState(() => {
     // Initialize dark mode based on localStorage or default to true
-    return localStorage.getItem('darkMode') === 'true' || true;
+    return localStorage.getItem('darkMode') === 'true' || false;
   });
 
   const toggleDarkMode = () => {
