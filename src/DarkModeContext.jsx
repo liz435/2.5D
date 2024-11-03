@@ -14,6 +14,7 @@ export function DarkModeProvider({ children }) {
   };
 
   useEffect(() => {
+    console
     localStorage.setItem('darkMode', darkMode);
   }, [darkMode]);
 

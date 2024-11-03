@@ -12,7 +12,7 @@ export function App() {
       <div className="app-wrapper">
       <div className="app-container">
       <h1 className="title-text">Hi, My Name Is Zelong</h1>
-      <h2 className="title-text">I am Technologist</h2>
+      <h2 className="title-text">I am a Technologist</h2>
       <h2 className="title-text">I like simple pretty things</h2>
       
       </div>

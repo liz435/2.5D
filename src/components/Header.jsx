@@ -3,35 +3,36 @@ import { motion } from 'framer-motion';
 import '../css/Header.css';
 import { Link } from 'react-router-dom';
 import { useDarkMode } from '../DarkModeContext';
-import Linkedin from '../assets/linkedin.svg';
 
 function Header() {
   const { darkMode, toggleDarkMode, setDarkMode } = useDarkMode(); 
   const [isFirstRender, setIsFirstRender] = useState(true);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+
   useEffect(() => {
-    setIsFirstRender(false);
+    // Get the initial dark mode state from localStorage, defaulting to false if not set
     const savedDarkMode = localStorage.getItem('darkMode') === 'true';
-    if (savedDarkMode) {
-      setTimeout(() => {
-        setDarkMode(true);
-        document.body.classList.add('dark-mode');
-      }, 500);
-    }
-  }, []);
-
-  useEffect(() => {
-    if (!isFirstRender) {
-      if (darkMode) {
-        document.body.classList.add('dark-mode');
-      } else {
-        document.body.classList.remove('dark-mode');
-      }
-      localStorage.setItem('darkMode', darkMode); 
-    }
-  }, [darkMode, isFirstRender]);
-
+    
+    // Update state and localStorage
+    setDarkMode(savedDarkMode);
+    localStorage.setItem('darkMode', savedDarkMode);
+    
+    // Update DOM
+    document.body.classList.toggle('dark-mode', savedDarkMode);
+  
+    // Set up the watcher for future changes
+    const updateDarkMode = (isDark) => {
+      document.body.classList.toggle('dark-mode', isDark);
+      localStorage.setItem('darkMode', isDark);
+    };
+  
+    // Create a cleanup function that removes event listeners if needed
+    return () => {
+      document.body.classList.remove('dark-mode');
+    };
+  }, [darkMode]);
+  
   return (
     <header className={`header ${darkMode ? '' : 'dark-mode'}`}>
       <div className="extra-word">
